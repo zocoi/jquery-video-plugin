@@ -1,0 +1,253 @@
+/* base styles */
+.video-player {}
+.video-play, .volume-button {
+	cursor: pointer;
+}
+.video-timer {
+	cursor: default;
+}
+
+.video-player {
+	position: relative;
+}
+
+.video-player .video-controls {
+	position: absolute;
+  bottom: 10px;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  opacity: 0.8;
+}
+
+.video-player .video-play, .video-player .video-seek, .video-player .volume-box, .video-timer {
+	float: left;
+}
+
+/* play, pause */
+.video-player .video-play {
+	display: block;
+	width: 22px;
+	height: 22px;
+	margin: 0 10px;
+	background: url('images/play-icon.png') no-repeat;	
+	
+	opacity: 0.7;
+	
+	-moz-transition: all 0.2s ease-in-out; /* Firefox */
+	-webkit-transition: all 0.2s ease-in-out; /* Safari and Chrome */
+	-o-transition: all 0.2s ease-in-out;  /* Opera */
+	transition: all 0.2s ease-in-out; 
+}
+
+.video-player .paused-button {
+	background: url('images/pause-icon.png') no-repeat;
+}
+
+
+.video-player video {
+	/* Styles for your video tag */
+}
+
+
+.video-player .video-play:hover {	
+    opacity: 1;
+}
+
+/* seek */
+.video-player .video-seek {
+	position:relative;		
+	width: 180px;
+	height: 10px;
+	margin-top: 5px;	
+	border: 1px solid #494949;
+
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+	
+	background: #535353;
+	background-image: -moz-linear-gradient(top, #535353, #333333);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #535353),color-stop(1, #333333));
+	
+	box-shadow: inset 0 -3px 3px #333333;
+}
+
+.video-player .video-seek .ui-slider-handle {
+	width: 15px;
+	height: 15px;
+	border: 1px solid #333;
+	top: -4px;
+
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;	
+	
+	background: #e6e6e6;
+	background-image: -moz-linear-gradient(top, #e6e6e6, #d5d5d5);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #e6e6e6),color-stop(1, #d5d5d5));
+	
+	box-shadow: inset 0 -3px 3px #d5d5d5;	
+}
+
+.video-player .video-seek .ui-slider-handle.ui-state-hover {
+	background: #fff;
+}
+
+.video-player .video-seek .ui-slider-range {
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+	
+	background: #4cbae8;
+	background-image: -moz-linear-gradient(top, #4cbae8, #39a2ce);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #4cbae8),color-stop(1, #39a2ce));
+	
+	box-shadow: inset 0 -3px 3px #39a2ce;
+}
+
+
+/* timer */
+.video-player .video-timer {
+	margin-top: 5px;
+	margin-left: 10px;
+	
+	color: #999;
+	font-size: 0.7em;
+	font-weight: bold;
+}
+
+/* volume */
+.video-player .volume-box {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	overflow: hidden;
+	width: 20px;
+	height: 30px;
+	color: #fff;
+	padding: 0px 10px;
+	
+	-moz-transition: all 0.1s ease-in-out; /* Firefox */
+	-webkit-transition: all 0.1s ease-in-out; /* Safari and Chrome */
+	-o-transition: all 0.2s ease-in-out;  /* Opera */
+	transition: all 0.1s ease-in-out; 
+}
+
+.video-player .volume-box:hover {	
+	height: 135px;
+	padding-top: 5px;
+}
+
+
+.video-player .volume-box:hover .volume-slider {
+	position: relative;
+	visibility: visible;
+	opacity: 1;
+}
+
+.video-player .volume-slider {	
+	position: relative;
+	height: 100px;
+	width: 7px;
+	left: 4px;
+	
+	visiblity: hidden;
+	opacity: 0;
+	
+	border: 1px solid #444;
+
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+	
+	background: #535353;
+	background-image: -moz-linear-gradient(top, #535353, #333333);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #535353),color-stop(1, #333333));
+	
+	box-shadow: inset 0 3px 3px #333333;
+	
+	-moz-transition: all 0.1s ease-in-out; /* Firefox */
+	-webkit-transition: all 0.1s ease-in-out; /* Safari and Chrome */
+	-o-transition: all 0.1s ease-in-out;  /* Opera */
+	transition: all 0.1s ease-in-out; 
+}
+
+.video-player .volume-slider .ui-slider-handle {
+	width: 12px;
+	height: 12px;
+	left: -4px;
+	margin-bottom:-0.6em;
+	margin-left:0;
+	border: 1px solid #333;	
+
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;	
+	
+	background: #e6e6e6;
+	background-image: -moz-linear-gradient(top, #e6e6e6, #d5d5d5);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #e6e6e6),color-stop(1, #d5d5d5));
+	
+	box-shadow: inset 0 3px 3px #d5d5d5;	
+}
+
+.video-player .volume-slider .ui-slider-handle.ui-state-hover {
+	background: #fff;
+}
+
+.video-player .volume-slider .ui-slider-range {
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+	
+	background: #e6e6e6;
+	background-image: -moz-linear-gradient(top, #e6e6e6, #d5d5d5);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #e6e6e6),color-stop(1, #d5d5d5));
+	
+	box-shadow: inset 0 3px 3px #d5d5d5;
+}
+
+/* volume button */
+
+.video-player .volume-button {
+	position: absolute;
+	bottom: 0px;
+	display: block;
+	width: 22px;
+	height: 22px;
+	background: url('images/volume-full-icon.png') no-repeat;
+	text-indent: -9999px;
+	
+	opacity: 0.8;
+}
+
+.video-player .volume-button:hover {
+	opacity: 1;
+}
+
+.video-player .volume-mute {
+	background: url('images/volume-mute-icon.png') no-repeat;
+}
+
+/* needed jquery ui styles
+ * using these, we don't depend on jQuery UI's stylsheet
+ */
+.ui-slider-handle {
+	position: absolute;
+	z-index: 2;
+	display: block;
+	margin-left:-0.6em;
+	cursor: default;
+	outline: none;
+}
+
+.ui-slider-range {
+	display:block;
+	width:100%;	
+	height:100%;
+	left:0;
+	bottom: 0;
+	border:0 none;
+	position:absolute;
+	z-index:1;
+}

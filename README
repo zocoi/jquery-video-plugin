@@ -1,0 +1,8 @@
+Simple video controls for html 5 video
+
+Example:
+HTML: <video width="490" height="218" id="video">...</video>
+JS:   $("#video").video()
+
+Sample CSS:
+jquery.video.css
